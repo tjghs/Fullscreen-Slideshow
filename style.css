@@ -1,0 +1,21 @@
+body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#slideshow {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+
+img {
+    margin: 0 auto;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain
+}
