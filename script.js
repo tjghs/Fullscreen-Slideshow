@@ -9,9 +9,8 @@ script.src = "https://api.flickr.com/services/rest/?method=flickr.people.getPhot
 window.onload = () => {
   document.getElementsByTagName("head")[0].appendChild(script);
 
-  console.log('hi')
   ss = document.querySelector("#slideshow");
-
+  ss.style.backgroundColor = "#fff";
   ss.onclick = toggleFullScreen;
   window.setInterval(getRightImage, 5000)
 }
@@ -38,6 +37,7 @@ function jsonFlickrApi(data) {
     script.src = "https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=95bc9ba34511c5c6b3f35fb973f3cd92&user_id=144387717%40N03&extras=url_c%2Curl_o&format=json&page=" + (page + 1);
     document.getElementsByTagName("head")[0].appendChild(script);
   } else {
+    ss.style.backgroundColor = "#000";
     ss.lastElementChild.src = linkArr[index][0];
   }
 }
